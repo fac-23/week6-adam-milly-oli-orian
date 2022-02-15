@@ -13,8 +13,9 @@
 }
 
 .box {
-  display: flex;
-  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .btn {
