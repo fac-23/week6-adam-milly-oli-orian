@@ -66,5 +66,12 @@ INSERT INTO products (name, price, description, url) VALUES (
     'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 );
 
+INSERT INTO products (name, price, description, url) VALUES (
+    'Minty Fresh ',
+    4,
+    'So cool 😎',
+    'https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+);
+
 
 COMMIT;
