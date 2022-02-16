@@ -1,23 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
+import ProductCards from "../components/ProductCards";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
 
 // this function should be in index.js
 // get the data from db?
-// export async function getStaticProps() {
-//   // db query
-//   const allProductData = await getProductData();
+export async function getServerSideProps() {
+  // db query
+  const allProductData = await getProductData();
+  // attach this as props to page
+  return {
+    props: {
+      allProductData,
+    },
+  };
+}
 
-//   // attach this as props to page
-//   return {
-//     props: {
-//       allProductData,
-//     },
-//   };
-// }
-
-export default function Home() {
+export default function Home({ allProductData }) {
+  console.log("allProductData", allProductData);
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +30,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Week 6!!!!!</h1>
         {/* <p>{allProductData[0].name}</p> */}
-
+        <ProductCards allProductData={allProductData} />
         <p className={styles.description}>
           Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
