@@ -20,10 +20,24 @@ export async function getStaticPaths() {
     };
   });
 
+  console.log(paths);
   return {
     paths,
     fallback: false,
   };
+
+  // This is what paths array looks like:
+  //[
+  //   { params: { id: '1' } },
+  //   { params: { id: '2' } },
+  //   { params: { id: '3' } },
+  //   { params: { id: '4' } },
+  //   { params: { id: '5' } },
+  //   { params: { id: '6' } },
+  //   { params: { id: '7' } },
+  //   { params: { id: '8' } },
+  //   { params: { id: '9' } }
+  // ]
 }
 
 //getStaticProps collects the product information about a specific product
