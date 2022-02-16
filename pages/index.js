@@ -17,7 +17,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProductData }) {
-  console.log("allProductData", allProductData);
   return (
     <div className={styles.container}>
       <Head>

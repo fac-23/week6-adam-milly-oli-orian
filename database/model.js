@@ -15,7 +15,7 @@ export function getAllIds() {
 }
 
 export function getUniqueProduct(id) {
-  const SELECT_UNIQUE = `SELECT product WHERE id = $1`;
+  const SELECT_UNIQUE = `SELECT * FROM products WHERE id = $1`;
   return db.query(SELECT_UNIQUE, [id]).then((result) => {
     return result.rows;
   });
