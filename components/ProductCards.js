@@ -1,8 +1,9 @@
 import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 export default function ProductCards({ allProductData }) {
   return (
-    <div>
+    <div className={styles.grid}>
       {allProductData.map(({ id, name, price, description, url }) => (
         <li key={id}>
           <Image src={url} height={300} width={300} alt="cupcake" />
