@@ -40,7 +40,7 @@ export default function Home({ allProductData }) {
 
         <p className={styles.description}>Feeling peckish?</p>
 
-        <div className={styles.grid}>
+        <div>
           <ProductCards allProductData={allProductData} />
             
           <a href="https://nextjs.org/docs" className={styles.card}>
