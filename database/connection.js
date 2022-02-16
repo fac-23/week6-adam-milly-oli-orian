@@ -1,8 +1,16 @@
-var pg = require('pg');
-//or native libpq bindings
-//var pg = require('pg').native
+const pg = require("pg");
+const dotenv = require("dotenv");
 
-const conString = process.env.DATABASE_URL //Can be found in the Details page
-const db = new pg.Client(conString);
+dotenv.config();
 
-export { db } ;
+const conString = process.env.DATABASE_URL;
+
+if (!conString) throw new Error("no database URL env var!");
+
+const options = {
+  connectionString: conString,
+};
+
+const db = new pg.Pool(options);
+
+export default db;
