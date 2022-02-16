@@ -1,12 +1,11 @@
-import { db } from "./connection";
+import db from "./connection";
 
-// export function getProductData() {
-//   const SELECT_PRODUCTS = `SELECT * FROM products`;
-//   return db.query(SELECT_PRODUCTS).then((result) => {
-//     console.log(result.rows);
-//     return result.rows;
-//   });
-// }
+export function getProductData() {
+  const SELECT_PRODUCTS = `SELECT * FROM products`;
+  return db.query(SELECT_PRODUCTS).then((result) => {
+    return result.rows;
+  });
+}
 
 // GET POSTS //
 // function getPosts() {
