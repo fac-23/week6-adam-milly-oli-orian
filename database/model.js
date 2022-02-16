@@ -7,15 +7,16 @@ export function getProductData() {
   });
 }
 
-export function getProductId(){
-  const SELECT_PRODUCT_IDd = FROM products`;
-
+export function getAllIds() {
+  const SELECT_ALL_IDs = `SELECT id FROM products`;
+  return db.query(SELECT_ALL_IDs).then((result) => {
+    return result.rows;
+  });
 }
-// GET POSTS //
-// function getPosts() {
-//   const SELECT_POSTS = `SELECT * FROM posts`;
-//   return db.query(SELECT_POSTS).then((result) => {
-//     // console.log(result.rows);
-//     return result.rows;
-//   });
-// }
+
+export function getUniqueProduct(id) {
+  const SELECT_UNIQUE = `SELECT * FROM products WHERE id = $1`;
+  return db.query(SELECT_UNIQUE, [id]).then((result) => {
+    return result.rows;
+  });
+}

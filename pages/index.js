@@ -4,8 +4,7 @@ import ProductCards from "../components/ProductCards";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
 
-// this function should be in index.js
-// get the data from db?
+//get product data
 export async function getServerSideProps() {
   // db query
   const allProductData = await getProductData();
@@ -22,7 +21,6 @@ export async function getStaticPaths(){
   
 }
 export default function Home({ allProductData }) {
-  console.log("allProductData", allProductData);
   return (
     <div className={styles.container}>
       <Head>
@@ -44,9 +42,9 @@ export default function Home({ allProductData }) {
 
         <p className={styles.description}>Feeling peckish?</p>
 
-        <div className={styles.grid}>
+        <div>
           <ProductCards allProductData={allProductData} />
-            
+
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
