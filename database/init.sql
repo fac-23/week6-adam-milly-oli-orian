@@ -73,5 +73,20 @@ INSERT INTO products (name, price, description, url) VALUES (
     'https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
 );
 
+INSERT INTO products (name, price, description, url) VALUES (
+    'Mellow Yellow 💛',
+    3,
+    'The most vibrant cupcake on the market!',
+    'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80'
+);
+
+
+INSERT INTO products (name, price, description, url) VALUES (
+    'Rainbow and dragons 🌈 🐉',
+    6,
+    'Magical wonderful fluffy goodness',
+    'https://images.unsplash.com/photo-1596151227289-74af7765c16e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+);
+
 
 COMMIT;
