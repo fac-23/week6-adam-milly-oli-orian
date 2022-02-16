@@ -17,6 +17,10 @@ export async function getServerSideProps() {
   };
 }
 
+export async function getStaticPaths(){
+
+  
+}
 export default function Home({ allProductData }) {
   console.log("allProductData", allProductData);
   return (
