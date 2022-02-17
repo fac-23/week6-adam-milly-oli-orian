@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 export default function ProductCards({
   allProductData,
   sortOrder,
-  requiredTag,
+  requiredTags,
 }) {
   function compareNumbers(a, b) {
     switch (sortOrder) {
@@ -20,7 +20,7 @@ export default function ProductCards({
   }
 
   function filterUnwanted(item) {
-    const mergedRequirements = requiredTag.reduce(function (acc, x) {
+    const mergedRequirements = requiredTags.reduce(function (acc, x) {
       for (const key in x) acc[key] = x[key];
       return acc;
     }, {});

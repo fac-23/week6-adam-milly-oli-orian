@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function CategoryControls({ requiredTag, setRequiredTag }) {
+export default function CategoryControls({ requiredTags, setRequiredTags }) {
   const [checkedState, setCheckedState] = React.useState(
-    new Array(Object.keys(requiredTag).length).fill(false)
+    new Array(Object.keys(requiredTags).length).fill(false)
   );
 
   function manageCheckedState(position) {
@@ -12,7 +12,7 @@ export default function CategoryControls({ requiredTag, setRequiredTag }) {
 
     const unwantedItems = updatedCheckedState.map((ticked, index) => {
       let updatedObj = {};
-      let key = Object.keys(requiredTag[index])[0];
+      let key = Object.keys(requiredTags[index])[0];
       if (ticked) {
         updatedObj[key] = true;
       } else {
@@ -23,7 +23,7 @@ export default function CategoryControls({ requiredTag, setRequiredTag }) {
 
     setCheckedState(updatedCheckedState);
     console.log(unwantedItems);
-    setRequiredTag(unwantedItems);
+    setRequiredTags(unwantedItems);
   }
 
   return (

@@ -21,7 +21,7 @@ export async function getServerSideProps() {
 
 export default function Home({ allProductData }) {
   const [sortOrder, setSortOrder] = React.useState("default");
-  const [requiredTag, setRequiredTag] = React.useState([
+  const [requiredTags, setRequiredTags] = React.useState([
     { vegan: false },
     { nutallergysafe: false },
     { glutenfree: false },
@@ -55,13 +55,13 @@ export default function Home({ allProductData }) {
             sortOrder={sortOrder}
           ></SortControls>
           <CategoryControls
-            requiredTag={requiredTag}
-            setRequiredTag={setRequiredTag}
+            requiredTags={requiredTags}
+            setRequiredTags={setRequiredTags}
           ></CategoryControls>
           <ProductCards
             allProductData={allProductData}
             sortOrder={sortOrder}
-            requiredTag={requiredTag}
+            requiredTags={requiredTags}
           />
         </div>
       </main>
