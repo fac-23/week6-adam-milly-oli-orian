@@ -6,6 +6,7 @@ import SortControls from "../components/SortControls";
 import CategoryControls from "../components/CategoryControls";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
+import { useEffect, useState } from "react";
 
 //get product data
 export async function getServerSideProps() {
@@ -20,6 +21,9 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProductData }) {
+
+  // initial basket state - passed into ProductCards component
+  const [basket, setBasket] = useState([]);
   const [sortOrder, setSortOrder] = React.useState("default");
   const [requiredTags, setRequiredTags] = React.useState([
     { vegan: false },
@@ -50,6 +54,11 @@ export default function Home({ allProductData }) {
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
+          <ProductCards
+            allProductData={allProductData}
+            basket={basket}
+            setBasket={setBasket}
+          />
           <SortControls
             setSortOrder={setSortOrder}
             sortOrder={sortOrder}
