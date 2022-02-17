@@ -22,7 +22,6 @@ export async function getStaticPaths() {
     };
   });
 
-  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -59,7 +58,6 @@ export async function getStaticProps({ params }) {
 //Accepts productData from staticProps specific to a route
 export default function Product({ productData }) {
   // use productData to build out visual image
-  console.log(productData);
   const item = productData[0];
   return (
     <div className={styles.container}>

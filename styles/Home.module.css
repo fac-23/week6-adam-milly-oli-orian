@@ -7,11 +7,10 @@
 }
 
 .topContainer {
-  padding: 0 2rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
 }
 
 .main {
@@ -22,6 +21,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.sortControls {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: column;
+  margin: 1rem;
 }
 
 .box {
