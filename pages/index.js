@@ -3,6 +3,7 @@ import Image from "next/image";
 import ProductCards from "../components/ProductCards";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
+import { useEffect, useState } from "react";
 
 //get product data
 export async function getServerSideProps() {
@@ -17,6 +18,14 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProductData }) {
+  const [basket, setBasket] = useState([]);
+  // // useEffect(() => {
+  //   const find = localStorage.getItem("Basket");
+  //   console.log("hi", find);
+  //   const firstValue = JSON.parse(find);
+  //   return firstValue || "";
+  // });
+  console.log(basket);
   return (
     <div className={styles.container}>
       <Head>
@@ -39,7 +48,11 @@ export default function Home({ allProductData }) {
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
-          <ProductCards allProductData={allProductData} />
+          <ProductCards
+            allProductData={allProductData}
+            basket={basket}
+            setBasket={setBasket}
+          />
 
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
