@@ -2,11 +2,9 @@
   padding: 0 2rem;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
-  background-color: #eccfaa;
 }
-
 
 .main {
   min-height: 100vh;
@@ -16,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .box {
@@ -66,8 +63,8 @@
   font-size: 4rem;
 }
 
-.productTitle{
-  margin-bottom: 5rem;
+.productTitle {
+  margin: 0;
   line-height: 1.15;
   font-size: 4rem;
 }
@@ -75,6 +72,10 @@
 .title,
 .description {
   text-align: center;
+}
+
+.subheading {
+  font-size: 1rem;
 }
 
 .description {
@@ -94,14 +95,14 @@
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
 }
 
-.grid li{
-  margin:1rem;
+.grid li {
+  margin: 1rem;
 }
 
 .card {
@@ -146,18 +147,22 @@
   }
 }
 
-.productRoutes{
+.productRoutes {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-
-.logo{
-  background-size:contain ;
+.logo {
+  background-size: contain;
 }
 
-.productImage{
+.productImage {
   border-radius: 50px;
+}
+
+.productImage:hover {
+  opacity: 70%;
+  cursor: pointer;
 }
