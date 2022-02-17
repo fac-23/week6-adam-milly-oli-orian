@@ -18,14 +18,9 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProductData }) {
+  // initial basket state - passed into ProductCards component
   const [basket, setBasket] = useState([]);
-  // // useEffect(() => {
-  //   const find = localStorage.getItem("Basket");
-  //   console.log("hi", find);
-  //   const firstValue = JSON.parse(find);
-  //   return firstValue || "";
-  // });
-  console.log(basket);
+
   return (
     <div className={styles.container}>
       <Head>
