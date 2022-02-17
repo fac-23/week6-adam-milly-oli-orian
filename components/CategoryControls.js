@@ -28,6 +28,7 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
 
   return (
     <>
+      <h3>Select requirements:</h3>
       <input
         type="checkbox"
         name="vegan"

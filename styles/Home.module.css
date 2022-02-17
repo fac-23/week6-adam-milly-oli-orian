@@ -6,6 +6,14 @@
   flex-direction: column;
 }
 
+.topContainer {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
