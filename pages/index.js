@@ -1,8 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import React from "react";
 import ProductCards from "../components/ProductCards";
+import SortControls from "../components/SortControls";
+import CategoryControls from "../components/CategoryControls";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
+import { useEffect, useState } from "react";
 
 //get product data
 export async function getServerSideProps() {
@@ -17,6 +21,16 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProductData }) {
+  // initial basket state - passed into ProductCards component
+  const [basket, setBasket] = useState([]);
+  const [sortOrder, setSortOrder] = React.useState("default");
+  const [requiredTags, setRequiredTags] = React.useState([
+    { vegan: false },
+    { nutallergysafe: false },
+    { glutenfree: false },
+    { dairyfree: false },
+  ]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -41,7 +55,21 @@ export default function Home({ allProductData }) {
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
-          <ProductCards allProductData={allProductData} />
+          <SortControls
+            setSortOrder={setSortOrder}
+            sortOrder={sortOrder}
+          ></SortControls>
+          <CategoryControls
+            requiredTags={requiredTags}
+            setRequiredTags={setRequiredTags}
+          ></CategoryControls>
+          <ProductCards
+            allProductData={allProductData}
+            sortOrder={sortOrder}
+            requiredTags={requiredTags}
+            basket={basket}
+            setBasket={setBasket}
+          />
         </div>
       </main>
 

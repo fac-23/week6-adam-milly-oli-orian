@@ -20,3 +20,10 @@ export function getUniqueProduct(id) {
     return result.rows;
   });
 }
+
+// export function getBasket(id) {
+//   const GRAB_CAKES = `SELECT * FROM products`;
+//   return db.query(GRAB_CAKES, [id]).then((result) => {
+//     return result.rows;
+//   });
+// }
