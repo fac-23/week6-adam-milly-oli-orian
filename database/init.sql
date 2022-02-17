@@ -10,9 +10,9 @@ CREATE TABLE products (
     url TEXT, 
     description TEXT,
     vegan BOOLEAN,
-    nutAllergySafe BOOLEAN,
-    glutenFree BOOLEAN,
-    dairyFree BOOLEAN
+    nutallergysafe BOOLEAN,
+    glutenfree BOOLEAN,
+    dairyfree BOOLEAN
     
 
 );
@@ -29,7 +29,7 @@ INSERT INTO users (name, email) VALUES (
 );
 
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Red Velvet',
     3,
     'A delicious red cupcake ♥️',
@@ -42,7 +42,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
 
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Sprinkle Town',
     4,
     'Super sweet with extra sprinkles 🦄',
@@ -53,7 +53,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
     false
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Chocolate overload',
     5,
     'Rich crunchy goodness🍫',
@@ -64,7 +64,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
     false
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Cherry on top!',
     3,
     'We challenge you to find a more perfect item 🍒',
@@ -75,7 +75,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
     false
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Green Envy',
     3,
     'Beautifully decorated royal cupcakeness 🟢',
@@ -86,7 +86,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
     false
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Coffee Monster',
     2,
     'Missed your espress this morning?',
@@ -97,7 +97,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
     false
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Minty Fresh ',
     4,
     'So cool 😎',
@@ -108,7 +108,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
     true
 );
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Mellow Yellow 💛',
     3,
     'The most vibrant cupcake on the market!',
@@ -120,7 +120,7 @@ INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glut
 );
 
 
-INSERT INTO products (name, price, description, url, vegan, nutAllergySafe, glutenFree, dairyFree) VALUES (
+INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Rainbow and dragons 🌈 🐉',
     6,
     'Magical wonderful fluffy goodness',

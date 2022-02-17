@@ -25,15 +25,22 @@ export default function ProductCards({
       return acc;
     }, {});
 
-    const requirements = Object.keys(mergedRequirements);
+    //specific requirements
+    let meetsRequirements = true;
 
-    console.log("item", item);
+    if (mergedRequirements.vegan && !item.vegan) {
+      meetsRequirements = false;
+    } else if (mergedRequirements.nutallergysafe && !item.nutallergysafe) {
+      meetsRequirements = false;
+    } else if (mergedRequirements.glutenfree && !item.glutenfree) {
+      meetsRequirements = false;
+    } else if (mergedRequirements.dairyfree && !item.dairyfree) {
+      meetsRequirements = false;
+    }
 
-    requirements.forEach((requirement) => {
-      console.log("requirement", requirement);
-      console.log(item[requirement]);
-      console.log("gf", item.glutenfree);
-    });
+    if (meetsRequirements) {
+      return item;
+    }
   }
 
   return (

@@ -23,9 +23,9 @@ export default function Home({ allProductData }) {
   const [sortOrder, setSortOrder] = React.useState("default");
   const [requiredTag, setRequiredTag] = React.useState([
     { vegan: false },
-    { nutAllergySafe: false },
-    { glutenFree: false },
-    { dairyFree: false },
+    { nutallergysafe: false },
+    { glutenfree: false },
+    { dairyfree: false },
   ]);
 
   return (
