@@ -48,21 +48,30 @@ export default function Home({ allProductData }) {
             Basket
           </button>
         </nav>
-        <div className={styles.container}>
-        <h1 className={styles.title}>Cupcake Store</h1>
-        <img  src='/unicornCakeLogo.png' height={150} width={200} alt="logo"></img>
+
+        <div className={styles.topContainer}>
+          <aside>
+            <SortControls
+              setSortOrder={setSortOrder}
+              sortOrder={sortOrder}
+            ></SortControls>
+            <CategoryControls
+              requiredTags={requiredTags}
+              setRequiredTags={setRequiredTags}
+            ></CategoryControls>
+          </aside>
+          <h1 className={styles.title}>Cupcake Store</h1>
+          <img
+            src="/unicornCakeLogo.png"
+            height={150}
+            width={200}
+            alt="logo"
+          ></img>
         </div>
+
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
-          <SortControls
-            setSortOrder={setSortOrder}
-            sortOrder={sortOrder}
-          ></SortControls>
-          <CategoryControls
-            requiredTags={requiredTags}
-            setRequiredTags={setRequiredTags}
-          ></CategoryControls>
           <ProductCards
             allProductData={allProductData}
             sortOrder={sortOrder}
@@ -71,17 +80,13 @@ export default function Home({ allProductData }) {
             setBasket={setBasket}
           />
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href=""
-          target="_blank"
-          rel=""
-        >
-          Contact us at yum@tastycakes.com or on Facebook, Instagram
-        </a>
-      </footer>
+        <footer className={styles.footer}>
+          <a href="" target="_blank" rel="">
+            Contact us at yum@tastycakes.com or on Facebook, Instagram
+          </a>
+        </footer>
+      </main>
     </div>
   );
 }
