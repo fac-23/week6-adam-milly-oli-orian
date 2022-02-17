@@ -16,10 +16,6 @@ export async function getServerSideProps() {
   };
 }
 
-export async function getStaticPaths(){
-
-  
-}
 export default function Home({ allProductData }) {
   return (
     <div className={styles.container}>
