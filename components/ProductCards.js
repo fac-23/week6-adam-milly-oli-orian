@@ -54,7 +54,7 @@ export default function ProductCards({
         .filter(filterUnwanted)
         .map(({ id, name, price, description, url: url }) => (
           <li key={id}>
-            <Image src={url} height={300} width={300} alt="cupcake" />
+            <Image  className={styles.productImage} src={url} height={300} width={300} alt="cupcake" />
             <p>{name}</p>
             <p>{description}</p>
             <p>{price}</p>

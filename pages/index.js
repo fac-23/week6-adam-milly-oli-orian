@@ -48,8 +48,10 @@ export default function Home({ allProductData }) {
             Basket
           </button>
         </nav>
+        <div className={styles.container}>
         <h1 className={styles.title}>Cupcake Store</h1>
-
+        <img  src='/unicornCakeLogo.png' height={150} width={200} alt="logo"></img>
+        </div>
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
@@ -73,14 +75,11 @@ export default function Home({ allProductData }) {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href=""
           target="_blank"
-          rel="noopener noreferrer"
+          rel=""
         >
           Contact us at yum@tastycakes.com or on Facebook, Instagram
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
         </a>
       </footer>
     </div>
