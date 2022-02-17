@@ -49,8 +49,13 @@ export default function Home({ allProductData }) {
           </button>
         </nav>
         <div className={styles.container}>
-        <h1 className={styles.title}>Cupcake Store</h1>
-        <img  src='/unicornCakeLogo.png' height={150} width={200} alt="logo"></img>
+          <h1 className={styles.title}>Cupcake Store</h1>
+          <Image
+            src="/unicornCakeLogo.png"
+            height={150}
+            width={200}
+            alt="logo"
+          />
         </div>
         <p className={styles.description}>Feeling peckish?</p>
 
@@ -74,11 +79,7 @@ export default function Home({ allProductData }) {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href=""
-          target="_blank"
-          rel=""
-        >
+        <a href="" target="_blank" rel="">
           Contact us at yum@tastycakes.com or on Facebook, Instagram
         </a>
       </footer>
