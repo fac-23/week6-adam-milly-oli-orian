@@ -1,6 +1,7 @@
 import { getAllIds, getUniqueProduct } from "/database/model.js";
 import Image from "next/image";
 import styles from "../../styles/globals.css"
+
 //nextJs calls getStaticPaths() AND getStaticProps() at build time (deployment)
 
 //getStaticPaths tells nextJs what possible routes there are
