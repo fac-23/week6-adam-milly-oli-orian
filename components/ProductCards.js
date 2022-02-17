@@ -14,8 +14,10 @@ export default function ProductCards({ allProductData, basket, setBasket }) {
           <button
             id={id}
             onClick={() => {
+              // get access to local storage
               if (typeof window !== "undefined") {
-                setBasket((basket) => [
+                // create a new basket which takes the current basket state and adds a cupcake object
+                const newBasket = [
                   ...basket,
                   {
                     id: id,
@@ -24,8 +26,15 @@ export default function ProductCards({ allProductData, basket, setBasket }) {
                     description: description,
                     url: url,
                   },
-                ]);
-                window.localStorage.setItem("Basket", JSON.stringify(basket));
+                ];
+                // update react basket state to new basket
+                setBasket(newBasket);
+                console.log("newBasket", newBasket);
+                // add new basket to local storage
+                window.localStorage.setItem(
+                  "Basket",
+                  JSON.stringify(newBasket)
+                );
               }
             }}
           >
