@@ -78,7 +78,7 @@ INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glut
 INSERT INTO products (name, price, description, url, vegan, nutallergysafe, glutenfree, dairyfree) VALUES (
     'Green Envy',
     3,
-    'Beautifully decorated royal cupcakeness 🟢',
+    'Beautifully decorated cupcakeness 🟢',
     'https://images.unsplash.com/photo-1612742126667-e669a77b710a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
     true,
     true,

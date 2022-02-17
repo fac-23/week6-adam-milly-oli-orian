@@ -50,16 +50,6 @@ export default function Home({ allProductData }) {
         </nav>
 
         <div className={styles.topContainer}>
-          <aside>
-            <SortControls
-              setSortOrder={setSortOrder}
-              sortOrder={sortOrder}
-            ></SortControls>
-            <CategoryControls
-              requiredTags={requiredTags}
-              setRequiredTags={setRequiredTags}
-            ></CategoryControls>
-          </aside>
           <h1 className={styles.title}>Cupcake Store</h1>
           <img
             src="/unicornCakeLogo.png"
@@ -69,6 +59,16 @@ export default function Home({ allProductData }) {
           ></img>
         </div>
 
+        <aside className={styles.controls}>
+          <SortControls
+            setSortOrder={setSortOrder}
+            sortOrder={sortOrder}
+          ></SortControls>
+          <CategoryControls
+            requiredTags={requiredTags}
+            setRequiredTags={setRequiredTags}
+          ></CategoryControls>
+        </aside>
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
