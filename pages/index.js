@@ -21,7 +21,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allProductData }) {
-
   // initial basket state - passed into ProductCards component
   const [basket, setBasket] = useState([]);
   const [sortOrder, setSortOrder] = React.useState("default");
@@ -54,11 +53,6 @@ export default function Home({ allProductData }) {
         <p className={styles.description}>Feeling peckish?</p>
 
         <div>
-          <ProductCards
-            allProductData={allProductData}
-            basket={basket}
-            setBasket={setBasket}
-          />
           <SortControls
             setSortOrder={setSortOrder}
             sortOrder={sortOrder}
@@ -71,6 +65,8 @@ export default function Home({ allProductData }) {
             allProductData={allProductData}
             sortOrder={sortOrder}
             requiredTags={requiredTags}
+            basket={basket}
+            setBasket={setBasket}
           />
         </div>
       </main>
