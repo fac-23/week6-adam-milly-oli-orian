@@ -25,13 +25,15 @@ export default function ProductCards({
       return acc;
     }, {});
 
-    const meetsRequirements = Object.keys(item).every((key) => {
-      return mergedRequirements[key] === true;
-    });
+    const requirements = Object.keys(mergedRequirements);
 
-    if (meetsRequirements) {
-      return item;
-    }
+    console.log("item", item);
+
+    requirements.forEach((requirement) => {
+      console.log("requirement", requirement);
+      console.log(item[requirement]);
+      console.log("gf", item.glutenfree);
+    });
   }
 
   return (

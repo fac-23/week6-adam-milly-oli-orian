@@ -40,14 +40,14 @@ export default function CategoryControls({ requiredTag, setRequiredTag }) {
       <label htmlFor="vegan">Vegan</label>
       <input
         type="checkbox"
-        name="nutAllergy"
-        value="nutAllergy"
+        name="nutAllergySafe"
+        value="nutAllergySafe"
         checked={checkedState[1]}
         onChange={() => {
           manageCheckedState(1);
         }}
       ></input>
-      <label htmlFor="nutAllergy">No Nuts</label>
+      <label htmlFor="nutAllergySafe">No Nuts</label>
       <input
         type="checkbox"
         name="glutenFree"
