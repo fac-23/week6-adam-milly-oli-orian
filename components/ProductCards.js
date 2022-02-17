@@ -1,7 +1,11 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-export default function ProductCards({ allProductData, sortOrder }) {
+export default function ProductCards({
+  allProductData,
+  sortOrder,
+  requiredTag,
+}) {
   function compareNumbers(a, b) {
     switch (sortOrder) {
       case "highToLow":
@@ -14,10 +18,27 @@ export default function ProductCards({ allProductData, sortOrder }) {
         return 0;
     }
   }
+
+  function filterUnwanted(item) {
+    const mergedRequirements = requiredTag.reduce(function (acc, x) {
+      for (const key in x) acc[key] = x[key];
+      return acc;
+    }, {});
+
+    const meetsRequirements = Object.keys(item).every((key) => {
+      return mergedRequirements[key] === true;
+    });
+
+    if (meetsRequirements) {
+      return item;
+    }
+  }
+
   return (
     <div className={styles.grid}>
       {allProductData
         .sort(compareNumbers)
+        .filter(filterUnwanted)
         .map(({ id, name, price, description, url }) => (
           <li key={id}>
             <Image src={url} height={300} width={300} alt="cupcake" />

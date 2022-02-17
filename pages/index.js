@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import ProductCards from "../components/ProductCards";
 import SortControls from "../components/SortControls";
+import CategoryControls from "../components/CategoryControls";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
 
@@ -20,6 +21,12 @@ export async function getServerSideProps() {
 
 export default function Home({ allProductData }) {
   const [sortOrder, setSortOrder] = React.useState("default");
+  const [requiredTag, setRequiredTag] = React.useState([
+    { vegan: false },
+    { nutAllergy: false },
+    { glutenFree: false },
+    { dairyFree: false },
+  ]);
 
   return (
     <div className={styles.container}>
@@ -47,7 +54,15 @@ export default function Home({ allProductData }) {
             setSortOrder={setSortOrder}
             sortOrder={sortOrder}
           ></SortControls>
-          <ProductCards allProductData={allProductData} sortOrder={sortOrder} />
+          <CategoryControls
+            requiredTag={requiredTag}
+            setRequiredTag={setRequiredTag}
+          ></CategoryControls>
+          <ProductCards
+            allProductData={allProductData}
+            sortOrder={sortOrder}
+            requiredTag={requiredTag}
+          />
         </div>
       </main>
 

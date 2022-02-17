@@ -11,7 +11,7 @@ export default function SortControls({ setSortOrder, sortOrder }) {
           checked={sortOrder === "default"}
           onChange={(event) => setSortOrder(event.target.value)}
         ></input>
-        <label for="default">unsorted</label>
+        <label htmlFor="default">unsorted</label>
       </div>
 
       <div>
@@ -23,7 +23,7 @@ export default function SortControls({ setSortOrder, sortOrder }) {
           checked={sortOrder === "highToLow"}
           onChange={(event) => setSortOrder(event.target.value)}
         ></input>
-        <label for="highToLow">high-to-low</label>
+        <label htmlFor="highToLow">high-to-low</label>
       </div>
 
       <div>
@@ -35,7 +35,7 @@ export default function SortControls({ setSortOrder, sortOrder }) {
           checked={sortOrder === "lowToHigh"}
           onChange={(event) => setSortOrder(event.target.value)}
         ></input>
-        <label for="lowToHigh">low-to-high</label>
+        <label htmlFor="lowToHigh">low-to-high</label>
       </div>
     </>
   );
