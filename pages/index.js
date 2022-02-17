@@ -41,11 +41,11 @@ export default function Home({ allProductData }) {
 
       <main className={styles.main}>
         <nav className={styles.box}>
-          <button className={styles.btn} type="submit">
+          {/* <button className={styles.btn} type="submit">
             Sign Up
-          </button>
-          <button className={styles.btn} type="button">
-            Basket
+          </button> */}
+          <button>
+            <a href={"/basket"}>Basket</a>
           </button>
         </nav>
         <div className={styles.container}>
