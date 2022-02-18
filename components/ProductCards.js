@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import { FaSolid, FaBasketShopping } from "react-icons/fa";
 
 export default function ProductCards({
   allProductData,
@@ -24,7 +25,6 @@ export default function ProductCards({
   }
 
   function filterUnwanted(item) {
-    // console.log(requiredTags);
     const mergedRequirements = requiredTags.reduce(function (acc, x) {
       for (const key in x) acc[key] = x[key];
       return acc;
@@ -70,6 +70,7 @@ export default function ProductCards({
             <p>{description}</p>
             <p>{price}</p>
             <button
+              aria-label={name}
               className={styles.btn}
               id={id}
               onClick={() => {
@@ -88,7 +89,6 @@ export default function ProductCards({
                   ];
                   // update react basket state to new basket
                   setBasket(newBasket);
-                  console.log("newBasket", newBasket);
                   // add new basket to local storage
                   window.localStorage.setItem(
                     "basket",
@@ -98,8 +98,9 @@ export default function ProductCards({
               }}
             >
               <Link href={"/basket"}>
-                <a>Add to basket</a>
+                <a>Add to Basket</a>
               </Link>
+              {/* <FontAwesomeIcon icon={"fa-solid fa-basket-shopping"} /> */}
             </button>
           </li>
         ))}
