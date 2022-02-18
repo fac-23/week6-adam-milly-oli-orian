@@ -46,22 +46,15 @@ Frontend first vs DB first
 Did you create a technical specification?
 Review methods of software design with reference to functional/technical specifications and apply a justified approach to software development (K11, S11, S12)
 
-Implementation/Build 
-How did you ensure your code was good?
-Create logical and maintainable code to deliver project outcomes, explaining their choice of approach. (S1)
 
 What interesting technical problems did you have to solve?
-Outline and apply the rationale and use of algorithms, logic and data structures. (K9, S16)
+
 
 How did you debug issues that arose?
-Apply structured techniques to problem solving to identify and resolve issues and debug basic flaws in code (S7)
+Console.log() and using Next server terminal errors as well as the local host browser would should errors immediately without opening the browser console
 
 Test 
-How did you verify your project worked correctly?
-Identify and create test scenarios which satisfy the project specification (S6)
-
-Did writing automated tests catch any bugs?
-Analyse unit testing results and review the outcomes, correcting errors. (S4)
+- We used Cypress to write tests from a TDD approach to think about what the user experience would be like
 
 Deploy 
 Where/how did you deploy your application?
