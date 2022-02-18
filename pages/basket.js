@@ -5,6 +5,9 @@
 // import ProductCards from "../components/ProductCards";
 // import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import styles from "../styles/Home.module.css";
 
 // export async function getServerSideProps() {
 //   const basketCakes = await getBasket();
@@ -23,24 +26,25 @@ export default function Basket() {
   console.log("basketItems", basketItems);
 
   return (
-    <div>
-      {basketItems.map(({ id, name, price, description, url: url }) => (
-        <li key={id}>
-          <Image src={url} height={300} width={300} alt="cupcake" />
+    <div className={styles.basket}>
+      {basketItems.map(({ id, name, price, description, url }) => (
+        <li key={id} className={styles.list}>
+          <h1 className={styles.title}>Basket</h1>
+          <Image
+            className={styles.productImage}
+            src={url}
+            height={150}
+            width={150}
+            alt="cupcake"
+          />
           <p>{name}</p>
           <p>{description}</p>
           <p>{price}</p>
-          {/* add onclick to delete element */}
-          <button>Remove from basket</button>
+          <Link href={"/"}>
+            <a>⏎ Back to home</a>
+          </Link>
         </li>
       ))}
     </div>
   );
 }
-
-// useEffect(() => {
-//   let basketItems = [];
-//   basketItems = JSON.parse(localStorage.getItem("Basket"));
-//   // return firstValue || "";
-//   console.log(basketItems);
-// }, []);

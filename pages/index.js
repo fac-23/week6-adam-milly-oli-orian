@@ -7,6 +7,7 @@ import CategoryControls from "../components/CategoryControls";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 //get product data
 export async function getServerSideProps() {
@@ -41,22 +42,23 @@ export default function Home({ allProductData }) {
 
       <main className={styles.main}>
         <nav className={styles.box}>
-          <button className={styles.btn} type="submit">
+          {/* <button className={styles.btn} type="submit">
             Sign Up
-          </button>
-          <button className={styles.btn} type="button">
-            Basket
-          </button>
+          </button> */}
+          <div className={styles.btn}>
+            <Link href={"/basket"}>
+              <a>Basket</a>
+            </Link>
+          </div>
         </nav>
-
-        <div className={styles.topContainer}>
+        <div className={styles.container}>
           <h1 className={styles.title}>Cupcake Store</h1>
-          <img
+          <Image
             src="/unicornCakeLogo.png"
             height={150}
             width={200}
             alt="logo"
-          ></img>
+          />
         </div>
 
         <aside className={styles.controls}>
@@ -80,7 +82,6 @@ export default function Home({ allProductData }) {
             setBasket={setBasket}
           />
         </div>
-
         <footer className={styles.footer}>
           <a href="" target="_blank" rel="">
             Contact us at yum@tastycakes.com or on Facebook, Instagram

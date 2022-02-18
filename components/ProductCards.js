@@ -53,7 +53,7 @@ export default function ProductCards({
       {allProductData
         .sort(compareNumbers)
         .filter(filterUnwanted)
-        .map(({ id, name, price, description, url: url }) => (
+        .map(({ id, name, price, description, url }) => (
           <li key={id}>
             <Link href={`/products/${id}`}>
               <a>
@@ -70,6 +70,7 @@ export default function ProductCards({
             <p>{description}</p>
             <p>{price}</p>
             <button
+              className={styles.btn}
               id={id}
               onClick={() => {
                 // get access to local storage
@@ -96,7 +97,9 @@ export default function ProductCards({
                 }
               }}
             >
-              Add to basket
+              <Link href={"/basket"}>
+                <a>Add to basket</a>
+              </Link>
             </button>
           </li>
         ))}
