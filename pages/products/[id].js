@@ -86,6 +86,12 @@ export default function Product({ productData }) {
               width={200}
               alt="cupcake"
             />
+            <p>{item.name}</p>
+            <p>{item.description}</p>
+            <p>{item.price}</p>
+            <button className={styles.btn} aria-label={item.name}>
+              <a href={"/basket"}>Add to basket</a>
+            </button>
             <h2 className={styles.subheading}>Description:</h2>
             <p>{item.description}</p>
             <h2 className={styles.subheading}>Price:</h2>
