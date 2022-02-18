@@ -24,7 +24,7 @@ export default function ProductCards({
   }
 
   function filterUnwanted(item) {
-    console.log(requiredTags);
+    // console.log(requiredTags);
     const mergedRequirements = requiredTags.reduce(function (acc, x) {
       for (const key in x) acc[key] = x[key];
       return acc;
@@ -91,7 +91,7 @@ export default function ProductCards({
                   console.log("newBasket", newBasket);
                   // add new basket to local storage
                   window.localStorage.setItem(
-                    "Basket",
+                    "basket",
                     JSON.stringify(newBasket)
                   );
                 }
