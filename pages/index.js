@@ -54,6 +54,7 @@ export default function Home({ allProductData }) {
         <div className={styles.container}>
           <h1 className={styles.title}>Cupcake Store</h1>
           <Image
+            className={styles.title}
             src="/unicornCakeLogo.png"
             height={150}
             width={200}

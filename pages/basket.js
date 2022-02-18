@@ -23,7 +23,6 @@ export default function Basket() {
   if (typeof window !== "undefined") {
     basketItems = JSON.parse(localStorage.getItem("Basket"));
   }
-  console.log("basketItems", basketItems);
 
   return (
     <div className={styles.basket}>

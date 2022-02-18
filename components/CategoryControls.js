@@ -11,7 +11,7 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
       index === position ? !item : item
     );
 
-    const unwantedItems = updatedCheckedState.map((ticked, index) => {
+    const newRequirements = updatedCheckedState.map((ticked, index) => {
       let updatedObj = {};
       let key = Object.keys(requiredTags[index])[0];
       if (ticked) {
@@ -23,8 +23,7 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
     });
 
     setCheckedState(updatedCheckedState);
-    console.log(unwantedItems);
-    setRequiredTags(unwantedItems);
+    setRequiredTags(newRequirements);
   }
 
   return (
