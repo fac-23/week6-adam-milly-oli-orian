@@ -70,28 +70,22 @@ export default function Product({ productData }) {
         </Head>
         <nav className={styles.box}>
           <Link href={"/"}>
-            <a>⏎ Back to home</a>
+            <a className={styles.productNav}>⏎ Back to home</a>
           </Link>
           <Link href={"/basket"}>
-            <a>⏎ Basket</a>
+            <a className={styles.productNav}>⏎ Basket</a>
           </Link>
         </nav>
-        <h1 className={styles.productTitle}>Cupcake Store</h1>
+        <h1 className={styles.productTitle}>{item.name}</h1>
         <div className={styles.container}>
           <li key={item.id}>
             <Image
-              className={styles.productImage}
+              className={styles.singleImage}
               src={item.url}
               height={200}
               width={200}
               alt="cupcake"
             />
-            <p>{item.name}</p>
-            <p>{item.description}</p>
-            <p>{item.price}</p>
-            <button className={styles.btn}>
-              <a href={"/basket"}>Add to basket</a>
-            </button>
             <h2 className={styles.subheading}>Description:</h2>
             <p>{item.description}</p>
             <h2 className={styles.subheading}>Price:</h2>
@@ -101,7 +95,9 @@ export default function Product({ productData }) {
             <p>No Nuts: {item.nutallergysafe ? "✅" : "🚫"}</p>
             <p>Gluten Free: {item.glutenfree ? "✅" : "🚫"}</p>
             <p>Dairy Free: {item.dairyfree ? "✅" : "🚫"}</p>
-            <button>Add to basket</button>
+            <button className={styles.btn}>
+              <a href={"/basket"}>Add to basket</a>
+            </button>
           </li>
         </div>
       </main>
