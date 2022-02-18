@@ -89,7 +89,7 @@ export default function Product({ productData }) {
             <p>{item.name}</p>
             <p>{item.description}</p>
             <p>{item.price}</p>
-            <button className={styles.btn}>
+            <button className={styles.btn} aria-label={item.name}>
               <a href={"/basket"}>Add to basket</a>
             </button>
             <h2 className={styles.subheading}>Description:</h2>

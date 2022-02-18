@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import { FaSolid, FaBasketShopping } from "react-icons/fa";
 
 export default function ProductCards({
   allProductData,
@@ -70,6 +71,7 @@ export default function ProductCards({
             <p>{description}</p>
             <p>{price}</p>
             <button
+              aria-label={name}
               className={styles.btn}
               id={id}
               onClick={() => {
@@ -98,8 +100,9 @@ export default function ProductCards({
               }}
             >
               <Link href={"/basket"}>
-                <a>Add to basket</a>
+                <a>Add to Basket</a>
               </Link>
+              {/* <FontAwesomeIcon icon={"fa-solid fa-basket-shopping"} /> */}
             </button>
           </li>
         ))}
