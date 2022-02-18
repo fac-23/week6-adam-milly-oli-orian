@@ -25,7 +25,6 @@ export default function ProductCards({
   }
 
   function filterUnwanted(item) {
-    console.log(requiredTags);
     const mergedRequirements = requiredTags.reduce(function (acc, x) {
       for (const key in x) acc[key] = x[key];
       return acc;
@@ -90,7 +89,6 @@ export default function ProductCards({
                   ];
                   // update react basket state to new basket
                   setBasket(newBasket);
-                  console.log("newBasket", newBasket);
                   // add new basket to local storage
                   window.localStorage.setItem(
                     "Basket",
