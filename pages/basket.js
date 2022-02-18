@@ -27,6 +27,7 @@ export default function Basket() {
 
   return (
     <ul className={styles.basket}>
+      <h1 className={styles.title}>Basket</h1>
       {!basketItems ? (
         <li className="flex-column">
           <p>Your basket is empty :( </p>
@@ -38,7 +39,6 @@ export default function Basket() {
       ) : (
         basketItems.map(({ id, name, price, description, url }) => (
           <li className={styles.list} key={id}>
-            <h1 className={styles.title}>Basket</h1>
             <Image
               className={styles.productImage}
               src={url}
