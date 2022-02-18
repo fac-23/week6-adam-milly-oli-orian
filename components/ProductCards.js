@@ -55,13 +55,17 @@ export default function ProductCards({
         .filter(filterUnwanted)
         .map(({ id, name, price, description, url }) => (
           <li key={id}>
-            <Image
-              className={styles.productImage}
-              src={url}
-              height={300}
-              width={300}
-              alt="cupcake"
-            />
+            <Link href={`/products/${id}`}>
+              <a>
+                <Image
+                  className={styles.productImage}
+                  src={url}
+                  height={300}
+                  width={300}
+                  alt="cupcake"
+                />
+              </a>
+            </Link>
             <p>{name}</p>
             <p>{description}</p>
             <p>{price}</p>

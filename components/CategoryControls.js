@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/Home.module.css";
 
 export default function CategoryControls({ requiredTags, setRequiredTags }) {
   const [checkedState, setCheckedState] = React.useState(
@@ -27,7 +28,9 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
   }
 
   return (
-    <>
+    <div className={styles.sortControls}>
+      <h3>Select requirements:</h3>
+      <label htmlFor="vegan">Vegan</label>
       <input
         type="checkbox"
         name="vegan"
@@ -37,7 +40,8 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
           manageCheckedState(0);
         }}
       ></input>
-      <label htmlFor="vegan">Vegan</label>
+
+      <label htmlFor="nutallergysafe">No Nuts</label>
       <input
         type="checkbox"
         name="nutallergysafe"
@@ -47,7 +51,8 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
           manageCheckedState(1);
         }}
       ></input>
-      <label htmlFor="nutallergysafe">No Nuts</label>
+
+      <label htmlFor="glutenfree">Gluten Free</label>
       <input
         type="checkbox"
         name="glutenfree"
@@ -57,7 +62,8 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
           manageCheckedState(2);
         }}
       ></input>
-      <label htmlFor="glutenfree">Gluten Free</label>
+
+      <label htmlFor="dairyfree">Dairy Free</label>
       <input
         type="checkbox"
         name="dairyfree"
@@ -67,7 +73,6 @@ export default function CategoryControls({ requiredTags, setRequiredTags }) {
           manageCheckedState(3);
         }}
       ></input>
-      <label htmlFor="dairyfree">Dairy Free</label>
-    </>
+    </div>
   );
 }

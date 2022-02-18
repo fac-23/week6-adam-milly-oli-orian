@@ -60,9 +60,8 @@ export default function Home({ allProductData }) {
             alt="logo"
           />
         </div>
-        <p className={styles.description}>Feeling peckish?</p>
 
-        <div>
+        <aside className={styles.controls}>
           <SortControls
             setSortOrder={setSortOrder}
             sortOrder={sortOrder}
@@ -71,6 +70,10 @@ export default function Home({ allProductData }) {
             requiredTags={requiredTags}
             setRequiredTags={setRequiredTags}
           ></CategoryControls>
+        </aside>
+        <p className={styles.description}>Feeling peckish?</p>
+
+        <div>
           <ProductCards
             allProductData={allProductData}
             sortOrder={sortOrder}
@@ -79,13 +82,12 @@ export default function Home({ allProductData }) {
             setBasket={setBasket}
           />
         </div>
+        <footer className={styles.footer}>
+          <a href="" target="_blank" rel="">
+            Contact us at yum@tastycakes.com or on Facebook, Instagram
+          </a>
+        </footer>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="" target="_blank" rel="">
-          Contact us at yum@tastycakes.com or on Facebook, Instagram
-        </a>
-      </footer>
     </div>
   );
 }

@@ -23,7 +23,6 @@ export async function getStaticPaths() {
     };
   });
 
-  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -60,7 +59,6 @@ export async function getStaticProps({ params }) {
 //Accepts productData from staticProps specific to a route
 export default function Product({ productData }) {
   // use productData to build out visual image
-  console.log(productData);
   const item = productData[0];
   return (
     <div className={styles.container}>
@@ -87,7 +85,6 @@ export default function Product({ productData }) {
               height={200}
               width={200}
               alt="cupcake"
-              resizeMode="contain"
             />
             <p>{item.name}</p>
             <p>{item.description}</p>
@@ -95,6 +92,16 @@ export default function Product({ productData }) {
             <button className={styles.btn}>
               <a href={"/basket"}>Add to basket</a>
             </button>
+            <h2 className={styles.subheading}>Description:</h2>
+            <p>{item.description}</p>
+            <h2 className={styles.subheading}>Price:</h2>
+            <p>£{item.price.toFixed(2)}</p>
+            <h2 className={styles.subheading}>Dietary requirements:</h2>
+            <p>Vegan: {item.vegan ? "✅" : "🚫"}</p>
+            <p>No Nuts: {item.nutallergysafe ? "✅" : "🚫"}</p>
+            <p>Gluten Free: {item.glutenfree ? "✅" : "🚫"}</p>
+            <p>Dairy Free: {item.dairyfree ? "✅" : "🚫"}</p>
+            <button>Add to basket</button>
           </li>
         </div>
       </main>

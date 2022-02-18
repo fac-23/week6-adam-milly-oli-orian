@@ -1,6 +1,8 @@
+import styles from "../styles/Home.module.css";
+
 export default function SortControls({ setSortOrder, sortOrder }) {
   return (
-    <>
+    <div className={styles.sortControls}>
       <div>
         <h3>Sort by price:</h3>
         <input
@@ -37,6 +39,6 @@ export default function SortControls({ setSortOrder, sortOrder }) {
         ></input>
         <label htmlFor="lowToHigh">low-to-high</label>
       </div>
-    </>
+    </div>
   );
 }
