@@ -2,6 +2,7 @@ import Head from "next/head";
 import { getAllIds, getUniqueProduct } from "/database/model.js";
 import styles from "../../styles/Home.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 //nextJs calls getStaticPaths() AND getStaticProps() at build time (deployment)
 
@@ -70,10 +71,12 @@ export default function Product({ productData }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <nav className={styles.box}>
-          <button className={styles.btn} type="button">
-            <a href={"/products"}>Return to home</a>
-            <a href={"/basket"}>Basket</a>
-          </button>
+          <Link href={"/products"}>
+            <a>⏎ Back to home</a>
+          </Link>
+          <Link href={"/basket"}>
+            <a>Basket</a>
+          </Link>
         </nav>
         <h1 className={styles.productTitle}>Cupcake Store</h1>
         <div className={styles.container}>
@@ -81,14 +84,15 @@ export default function Product({ productData }) {
             <Image
               className={styles.productImage}
               src={item.url}
-              height={300}
-              width={300}
+              height={200}
+              width={200}
               alt="cupcake"
+              resizeMode="contain"
             />
             <p>{item.name}</p>
             <p>{item.description}</p>
             <p>{item.price}</p>
-            <button>
+            <button className={styles.btn}>
               <a href={"/basket"}>Add to basket</a>
             </button>
           </li>

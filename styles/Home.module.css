@@ -25,10 +25,28 @@
 
 .btn {
   background-color: rgb(170, 190, 255);
-  border-radius: 20%;
-  box-shadow: 0px 0px 2px 2px rgb(184, 184, 253);
-  margin: 1rem;
+  border-radius: 15%;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+  margin: 5rem;
   padding: 0.7rem;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.basket {
+  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list {
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center;
 }
 
 .footer {

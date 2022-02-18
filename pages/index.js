@@ -7,6 +7,7 @@ import CategoryControls from "../components/CategoryControls";
 import { getProductData } from "../database/model";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 //get product data
 export async function getServerSideProps() {
@@ -44,9 +45,11 @@ export default function Home({ allProductData }) {
           {/* <button className={styles.btn} type="submit">
             Sign Up
           </button> */}
-          <button>
-            <a href={"/basket"}>Basket</a>
-          </button>
+          <div className={styles.btn}>
+            <Link href={"/basket"}>
+              <a>Basket</a>
+            </Link>
+          </div>
         </nav>
         <div className={styles.container}>
           <h1 className={styles.title}>Cupcake Store</h1>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ProductCards({
   allProductData,
@@ -52,7 +53,7 @@ export default function ProductCards({
       {allProductData
         .sort(compareNumbers)
         .filter(filterUnwanted)
-        .map(({ id, name, price, description, url: url }) => (
+        .map(({ id, name, price, description, url }) => (
           <li key={id}>
             <Image
               className={styles.productImage}
@@ -65,6 +66,7 @@ export default function ProductCards({
             <p>{description}</p>
             <p>{price}</p>
             <button
+              className={styles.btn}
               id={id}
               onClick={() => {
                 // get access to local storage
@@ -91,7 +93,9 @@ export default function ProductCards({
                 }
               }}
             >
-              <a href={"/basket"}>Add to basket</a>
+              <Link href={"/basket"}>
+                <a>Add to basket</a>
+              </Link>
             </button>
           </li>
         ))}

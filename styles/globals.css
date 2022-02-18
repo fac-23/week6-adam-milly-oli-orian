@@ -7,8 +7,10 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #e41a78;
   text-decoration: none;
+  font-size: 1rem;
+  outline: none;
 }
 
 * {
@@ -19,6 +21,3 @@ li {
   list-style: none;
   max-width: 300px;
 }
-
-
-
