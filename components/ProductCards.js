@@ -49,7 +49,7 @@ export default function ProductCards({
   }
 
   return (
-    <div className={styles.grid}>
+    <ul className={styles.grid}>
       {allProductData
         .sort(compareNumbers)
         .filter(filterUnwanted)
@@ -91,7 +91,7 @@ export default function ProductCards({
                   setBasket(newBasket);
                   // add new basket to local storage
                   window.localStorage.setItem(
-                    "Basket",
+                    "basket",
                     JSON.stringify(newBasket)
                   );
                 }
@@ -104,6 +104,6 @@ export default function ProductCards({
             </button>
           </li>
         ))}
-    </div>
+    </ul>
   );
 }

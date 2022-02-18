@@ -23,7 +23,13 @@ export async function getServerSideProps() {
 
 export default function Home({ allProductData }) {
   // initial basket state - passed into ProductCards component
-  const [basket, setBasket] = useState([]);
+  const [basket, setBasket] = useState(() => {
+    if (typeof window !== "undefined") {
+      const currBasket = JSON.parse(localStorage.getItem("basket"));
+      return currBasket || [];
+    }
+  });
+
   const [sortOrder, setSortOrder] = React.useState("default");
   const [requiredTags, setRequiredTags] = React.useState([
     { vegan: false },

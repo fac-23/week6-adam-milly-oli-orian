@@ -76,8 +76,8 @@ export default function Product({ productData }) {
             <a className={styles.productNav}>⏎ Basket</a>
           </Link>
         </nav>
-        <h1 className={styles.productTitle}>{item.name}</h1>
-        <div className={styles.container}>
+        <h1 className={styles.productTitle}>Cupcake Store</h1>
+        <ul className={styles.container}>
           <li key={item.id}>
             <Image
               className={styles.singleImage}
@@ -105,8 +105,13 @@ export default function Product({ productData }) {
               <a href={"/basket"}>Add to basket</a>
             </button>
           </li>
-        </div>
+        </ul>
       </main>
     </div>
   );
 }
+
+
+
+
+

@@ -21,29 +21,39 @@ import styles from "../styles/Home.module.css";
 export default function Basket() {
   let basketItems = [];
   if (typeof window !== "undefined") {
-    basketItems = JSON.parse(localStorage.getItem("Basket"));
+    basketItems = JSON.parse(localStorage.getItem("basket"));
   }
 
   return (
-    <div className={styles.basket}>
-      {basketItems.map(({ id, name, price, description, url }) => (
-        <li key={id} className={styles.list}>
-          <h1 className={styles.title}>Basket</h1>
-          <Image
-            className={styles.productImage}
-            src={url}
-            height={150}
-            width={150}
-            alt="cupcake"
-          />
-          <p>{name}</p>
-          <p>{description}</p>
-          <p>{price}</p>
+    <ul className={styles.basket}>
+      <h1 className={styles.title}>Basket</h1>
+      {!basketItems ? (
+        <li className="flex-column">
+          <p>Your basket is empty :( </p>
+          <p>Go back and fill it with yummy cupcakes!</p>
           <Link href={"/"}>
             <a>⏎ Back to home</a>
           </Link>
         </li>
-      ))}
-    </div>
+      ) : (
+        basketItems.map(({ id, name, price, description, url }) => (
+          <li className={styles.list} key={id}>
+            <Image
+              className={styles.productImage}
+              src={url}
+              height={150}
+              width={150}
+              alt="cupcake"
+            />
+            <p>{name}</p>
+            <p>{description}</p>
+            <p>{price}</p>
+            <Link href={"/"}>
+              <a>⏎ Back to home</a>
+            </Link>
+          </li>
+        ))
+      )}
+    </ul>
   );
 }
