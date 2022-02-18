@@ -49,7 +49,7 @@ export default function ProductCards({
   }
 
   return (
-    <div className={styles.grid}>
+    <ul className={styles.grid}>
       {allProductData
         .sort(compareNumbers)
         .filter(filterUnwanted)
@@ -103,6 +103,6 @@ export default function ProductCards({
             </button>
           </li>
         ))}
-    </div>
+    </ul>
   );
 }

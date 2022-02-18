@@ -37,22 +37,24 @@ export default function Basket() {
         </div>
       ) : (
         basketItems.map(({ id, name, price, description, url }) => (
-          <li key={id} className={styles.list}>
-            <h1 className={styles.title}>Basket</h1>
-            <Image
-              className={styles.productImage}
-              src={url}
-              height={150}
-              width={150}
-              alt="cupcake"
-            />
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{price}</p>
-            <Link href={"/"}>
-              <a>⏎ Back to home</a>
-            </Link>
-          </li>
+          <ul key={id}>
+            <li className={styles.list}>
+              <h1 className={styles.title}>Basket</h1>
+              <Image
+                className={styles.productImage}
+                src={url}
+                height={150}
+                width={150}
+                alt="cupcake"
+              />
+              <p>{name}</p>
+              <p>{description}</p>
+              <p>{price}</p>
+              <Link href={"/"}>
+                <a>⏎ Back to home</a>
+              </Link>
+            </li>
+          </ul>
         ))
       )}
     </div>

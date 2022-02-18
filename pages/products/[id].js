@@ -77,7 +77,7 @@ export default function Product({ productData }) {
           </Link>
         </nav>
         <h1 className={styles.productTitle}>Cupcake Store</h1>
-        <div className={styles.container}>
+        <ul className={styles.container}>
           <li key={item.id}>
             <Image
               className={styles.productImage}
@@ -103,7 +103,7 @@ export default function Product({ productData }) {
             <p>Dairy Free: {item.dairyfree ? "✅" : "🚫"}</p>
             <button>Add to basket</button>
           </li>
-        </div>
+        </ul>
       </main>
     </div>
   );
