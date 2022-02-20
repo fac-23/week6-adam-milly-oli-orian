@@ -68,7 +68,7 @@ export default function ProductCards({
             </Link>
             <p>{name}</p>
             <p>{description}</p>
-            <p>{price}</p>
+            <p>£{price.toFixed(2)}</p>
             <button
               aria-label={name}
               className={styles.btn}

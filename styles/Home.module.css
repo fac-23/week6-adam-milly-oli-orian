@@ -42,7 +42,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1.5rem;
+  margin: 0.5rem;
 }
 
 .box .productNav {
@@ -67,6 +67,10 @@
   text-align: center;
 }
 
+.basketBtn {
+  display: flex;
+  justify-items: flex-end;
+}
 .basket {
   margin: 2rem 2rem;
   display: flex;
@@ -93,6 +97,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  text-align: center;
 }
 
 .title a {
@@ -107,7 +112,6 @@
 }
 
 .title {
-  margin: 0;
   line-height: 1.15;
   font-size: 4rem;
   animation-duration: 3s;
@@ -118,6 +122,7 @@
   margin-bottom: 1rem;
   line-height: 1.15;
   font-size: 4rem;
+  color: rgb(49, 49, 247);
 }
 
 .title,
@@ -127,6 +132,13 @@
 
 .subheading {
   font-size: 1rem;
+  text-align: center;
+  color: rgb(212, 69, 201);
+}
+
+.text {
+  text-align: center;
+  color: rgb(129, 129, 230);
 }
 
 .description {
@@ -154,6 +166,7 @@
 
 .grid li {
   margin: 1rem;
+  text-align: center;
 }
 
 .card {
@@ -203,6 +216,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  text-align: center;
 }
 
 .logo {
@@ -215,6 +229,7 @@
 
 .singleImage {
   border-radius: 50px;
+  margin: 3rem;
 }
 
 .productImage:hover {
