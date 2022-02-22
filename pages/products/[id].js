@@ -76,7 +76,7 @@ export default function Product({ productData }) {
             <a className={styles.productNav}>⏎ Basket</a>
           </Link>
         </nav>
-        <h1 className={styles.productTitle}>Cupcake Store</h1>
+        <h1 className={styles.productTitle}>Tasty Cakes</h1>
         <ul className={styles.container}>
           <li key={item.id}>
             <Image
@@ -86,21 +86,23 @@ export default function Product({ productData }) {
               width={200}
               alt="cupcake"
             />
-            <p>{item.name}</p>
-            <p>{item.description}</p>
-            <p>{item.price}</p>
-            <button className={styles.btn} aria-label={item.name}>
-              <a href={"/basket"}>Add to basket</a>
-            </button>
+            <h2 className={styles.subheading}>Name:</h2>
+            <p className={styles.text}>{item.name}</p>
             <h2 className={styles.subheading}>Description:</h2>
-            <p>{item.description}</p>
+            <p className={styles.text}>{item.description}</p>
             <h2 className={styles.subheading}>Price:</h2>
-            <p>£{item.price.toFixed(2)}</p>
+            <p className={styles.text}>£{item.price.toFixed(2)}</p>
             <h2 className={styles.subheading}>Dietary requirements:</h2>
-            <p>Vegan: {item.vegan ? "✅" : "🚫"}</p>
-            <p>No Nuts: {item.nutallergysafe ? "✅" : "🚫"}</p>
-            <p>Gluten Free: {item.glutenfree ? "✅" : "🚫"}</p>
-            <p>Dairy Free: {item.dairyfree ? "✅" : "🚫"}</p>
+            <p className={styles.text}>Vegan: {item.vegan ? "✅" : "🚫"}</p>
+            <p className={styles.text}>
+              No Nuts: {item.nutallergysafe ? "✅" : "🚫"}
+            </p>
+            <p className={styles.text}>
+              Gluten Free: {item.glutenfree ? "✅" : "🚫"}
+            </p>
+            <p className={styles.text}>
+              Dairy Free: {item.dairyfree ? "✅" : "🚫"}
+            </p>
             <button className={styles.btn}>
               <a href={"/basket"}>Add to basket</a>
             </button>
@@ -110,8 +112,3 @@ export default function Product({ productData }) {
     </div>
   );
 }
-
-
-
-
-
